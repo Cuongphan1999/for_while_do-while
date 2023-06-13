@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       // function play(){
+      //      let number = prompt("enter number:")
+      //      let secretNumber = Math.floor(Math.random()*100);
+      //     while(number != secretNumber){
+       //         number = prompt("ban doan sai");
+       //         if(number == prompt){
+        //            alert("ban nhap dung");
+       //             break;
+       //         }
+       //     }
+       // }
+       play();
+       function play(){
+        let count = 0;
+        let turn = 0;
+        let secretNumber = Math.floor(Math.random()*100);
+        let number; 
+        do{
+            number = prompt("enter number: ");
+            count++;
+            turn++;
+            if(number == secretNumber){
+                alert(`ban nhap dung ${count}`);
+                break;
+            }
+            if(turn >= 3){
+                alert("ban nhap qua 3 lan");
+                break;
+            }
+        }while(number != secretNumber);
+       }
+       play();
+        
+
+
+
+    </script>
+</body>
+</html>
