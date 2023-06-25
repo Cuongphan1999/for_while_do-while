@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function drawTriangle(){
+            let str="";
+            for(let i = 1; i <= 5; i++){
+                for(j = 0; j < i; j++){
+                    str+= "*";
+                }
+                str += "<br>";
+                
+            } 
+
+             for(let i = 5; i >= 0; i--) {
+                for(let j = 0; j < i; j++){
+                    str+= "*";
+                }
+                str += "<br>"
+             }
+            
+            //document.write(str);
+             for(let i = 5; i > 0; i--){
+                for(let j = 1; j <= 5; j++){
+                    if(j <i){ //1<5 cho to 5<5 k thoa thi *
+                        str+="&nbsp;&nbsp;"; //2nbsp bang 1 ky tu
+                    }else{
+                        str+="*";
+                    }                   
+                }
+                str+="<br>";
+             }
+             for(let i = 0; i < 5; i++){
+                for(let j = 0; j < 5; j++){
+                    if(j < i){ //i1=4,j1=2, vitri4:* con lai &nb 4<1
+                        str+="&nbsp;&nbsp;";
+                    }else{
+                        str+="*";
+                    }                   
+                }
+                str+="<br>";
+             }
+
+             document.write(str);
+        }
+        drawTriangle();
+
+
+
+
+
+
+    </script>
+</body>
+</html>
