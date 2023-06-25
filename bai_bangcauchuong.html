@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table id="bcc" border="1px"></table>
+    <script>
+        function showbcc() {  
+            //<tr> xác định phần tử là một hàng trong bảng
+            //<td> xác định phần tử là một ô trong hàng
+            let str = "";       
+            for(let i = 1; i <= 9; i++){
+                str += "<tr>"
+                for(let j = 2; j <= 9; j++){
+                    //str += "<td> 2 x "+ i +" = "+(2*i)+"</td>";
+                    //str += "<td> "+ j +" x "+ i +" = "+(j*i)+"</td>"; c1
+                    str += `<td>${j} x ${i} = ${j*i}</td>`; //c2
+                }
+                str += "</tr>";
+
+            }
+            document.getElementById('bcc').innerHTML = str;
+        }
+        showbcc();
+
+
+
+
+
+
+    </script>
+</body>
+</html>
