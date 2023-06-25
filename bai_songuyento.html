@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkPrime(n) { 
+            //let n = +prompt("nhap n: ");
+            let i = 2;
+            let flag = true;
+            if( n < 2) flag = false;
+            while(i < n){
+                if(n % i == 0){
+                    flag = false;
+                }
+                i++;
+            } 
+            //if(flag){
+            //    alert("so nguyen to");
+            //}else{
+             //   alert("khong phai so nguyen to");
+            //}
+            return flag; ///dung ra so nguyen to,sai kp so nguyento
+        }
+        //alert(checkPrime(2)); kt so nguyen to
+        function listPrime(){
+            let count = 0;
+            let n = 1;
+            while(count < 20){
+                if(checkPrime(n)){
+                    document.write(n+",");
+                    count++;
+                }
+                n++;
+            }
+
+        }
+        listPrime();
+
+
+
+
+
+    </script>    
+
+
+
+
+</body>
+</html>
