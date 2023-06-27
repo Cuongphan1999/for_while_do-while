@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let num = parseInt(prompt("enter number:"));
+    let reversed = 0;
+    //function reversedInteger(){
+        while (num > 0) {
+        reversed = reversed * 10 + num % 10;
+         num = Math.floor(num / 10);
+        }
+   // }
+    console.log(`Số đảo ngược của ${num} là: ${reversed}`);
+
+    </script>
+</body>
+</html>
